@@ -29,3 +29,13 @@ body{
  .para-bold-div{
     margin-top: 20px;
  }
+ @media (max-width: 1200px) {
+ .lower-container{
+   width: 90%;
+   height: 70%;
+ }
+ .upper-container{
+   width: 90%;
+   height: 70%;
+ }
+ }
