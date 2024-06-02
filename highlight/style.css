@@ -81,8 +81,16 @@ body {
     height: 50%;
     width: 50%;
   }
+  .card-container{
+    height: 80%;
+    width: 80%;
+  }
   .second{
     height: 50%;
     width: 50%;
+  }
+  .card-content{
+    height: 80%;
+    width: 80%;
   }
 }
