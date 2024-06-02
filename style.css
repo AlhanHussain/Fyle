@@ -83,6 +83,9 @@ body {
     .text-section button {
         font-size: 14px;
         padding: 8px 16px;
+    }.image-section{
+        width: 50%;
+        margin-left: 26%;
     }
 }
 
