@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="project.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    
+
+<div class="main-project-container">
+    <div class="main-project-container-upper">
+        <h3 class="project-heading">OUR PROJECT</h3>
+        <h1 class="project-heading-two">WHY WE ARE BEST</h1>
+    </div>
+
+
+
+    <div class="main-project-container-lower">
+       <div class="lower-img">
+        <img src="https://media.istockphoto.com/id/1625128632/photo/most-common-allergy-food-shot-from-above.jpg?b=1&s=612x612&w=0&k=20&c=jy8uEBErKnHmnunQ3xe-vetl65EGf__ZKOOs_bjCAaY=" class="my-lower-image"  alt="">
+       </div>
+       <div class="my-lower-text"
+         
+       >
+
+           <div class="para-one" onclick="changeImage('https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=400')">
+               
+               <h3>Genderless Kei - Japan's Hot</h3>
+               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet molestiae alias in omnis modi adipisci!</p>
+            </div>
+
+        <div class="para-two" onclick="changeImage('https://media.istockphoto.com/id/1316145932/photo/table-top-view-of-spicy-food.jpg?s=612x612&w=0&k=20&c=eaKRSIAoRGHMibSfahMyQS6iFADyVy1pnPdy1O5rZ98=')">
+            <h3>Battery Strategy & Quality</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quae ratione qui omnis voluptas officiis.</p>
+        </div>
+        <div class="para-three" onclick="changeImage('https://media.istockphoto.com/id/1625128632/photo/most-common-allergy-food-shot-from-above.jpg?b=1&s=612x612&w=0&k=20&c=jy8uEBErKnHmnunQ3xe-vetl65EGf__ZKOOs_bjCAaY=')">
+            <h3>Genderless Kei - Japan's Hot</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quae ratione qui omnis voluptas officiis.</p>
+        </div>
+    </div>
+    </div>
+</div>
+<script>
+    function changeImage(src,bgColor) {
+        document.querySelector('.my-lower-image').src = src;
+        document.body.style.backgroundColor = bgColor;
+
+    }
+
+
+</script>
+
+</body>
+</html>

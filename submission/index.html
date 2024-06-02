@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+<title>My Website</title>
+<style>
+  .card {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .card h2 {
+    margin-bottom: 20px;
+  }
+  .input-group {
+    margin-bottom: 16px;
+  }
+  .input-group.mb-2px {
+    margin-bottom: 2px;
+  }
+  .input-group label {
+    display: none;
+  }
+  .input-group input[type="text"],
+  .input-group input[type="email"] {
+    /* width: calc(50% - 10px); */
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    margin-right: 10px;
+  }
+  .input-group input[type="text"]:last-child {
+    margin-right: 0;
+  }
+  .checkbox-group {
+    margin-bottom: 16px;
+    margin-top: 25px;
+    display: flex;
+  }
+  .checkbox-label {
+    margin-left: 4px;
+  }
+  .labels{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+  }
+  
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="card">
+    <h2>Talk to us</h2>
+    <div class="input-group mb-2px">
+      <label for="work-email"></label>
+      <input type="email" id="work-email" placeholder=" work email*">
+    </div>
+    <div class="labels">
+      <div class="input-group">
+        <label for="first-name"></label>
+        
+        <input type="text" id="first-name" placeholder=" first name*">
+      </div>
+      <div class="input-group">
+        <label for="last-name"></label>
+        <input type="text" id="last-name" placeholder=" last name*">
+      </div>
+    </div>
+    <div class="checkbox-group">
+      <input type="checkbox" id="terms-checkbox">
+      <label class="checkbox-label" for="terms-checkbox">I agree to Fyle's terms and conditions, and provide consent to send me communication.</label>
+    </div>
+    <button onclick="submitForm()" class="button">Contact Us</button>
+  </div>
+  <!-- <div class="card">
+    <h2>Talk to us</h2>
+    <div class="input-group">
+      <label for="work-email">Work email</label>
+      <input type="email" id="work-email" value="Johndoe@acme.com" readonly>
+    </div>
+    <div class="input-group">
+      <label for="first-name">First name</label>
+      <input type="text" id="first-name" value="John" readonly>
+    </div>
+    <div class="input-group">
+      <label for="last-name">Last name</label>
+      <input type="text" id="last-name" value="Doe" readonly>
+    </div>
+    <div class="checkbox-group">
+      <input type="checkbox" id="terms-checkbox" checked>
+      <label class="checkbox-label" for="terms-checkbox">I agree to Fyle's terms and conditions, and provide consent to send me communication.</label>
+    </div>
+    <button class="button">Contact Us</button>
+  </div> -->
+</div>
+<script>
+    function submitForm() {
+      const workEmail = document.getElementById("work-email").value;
+      const firstName = document.getElementById("first-name").value;
+      const lastName = document.getElementById("last-name").value;
+      const termsCheckbox = document.getElementById("terms-checkbox").checked;
+    
+      if (!termsCheckbox) {
+        alert("Please agree to the terms and conditions.");
+        return;
+      }
+    
+      const formData = new FormData();
+      formData.append("work_email", workEmail);
+      formData.append("first_name", firstName);
+      formData.append("last_name", lastName);
+    
+      fetch("https://getform.io/f/pbgxgxya", {
+        method: "POST",
+        body: formData,
+      })
+        .then((response) => response.json())
+        .then(() => alert('submitted'))
+        .catch((error) => console.error(error));
+        alert("Form submitted successfully!"); // Add this line
+    }
+    </script>
+</body>
+</html>
